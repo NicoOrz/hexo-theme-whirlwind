@@ -1,13 +1,13 @@
 .navigation-menu {
-  animation: slideTopIn 1s;
+  animation: slideTopIn 0.5s;
 }
 
 .sidebar {
-  animation: slideLeftIn 1s;
+  animation: slideLeftIn 0.5s;
 }
 
 .footer {
-  animation: slideLeftIn 1s;
+  animation: slideLeftIn 0.5s;
 }
 
 .post-list > * {
@@ -19,10 +19,10 @@
 
 @for $i from 1 through 50 {
   .post-list > *:nth-child(#{$i}) {
-    animation-delay: calc(0.2s * #{$i});
+    animation-delay: calc(0.1s * #{$i});
   }
 }
 
 .post {
-  animation: slideTopIn 1s;
+  animation: slideTopIn 0.5s;
 }
