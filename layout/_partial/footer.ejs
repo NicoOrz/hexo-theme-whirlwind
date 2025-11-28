@@ -6,9 +6,30 @@
     <span>
         Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a> &amp;
         Theme <a href="https://github.com/SakuraKoi/hexo-theme-whirlwind" target="_blank">Whirlwind </a>
+<span id="runtime_span"></span>
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("11/28/2023 00:00:00"); // 🚨 【修改这里】换成你的建站日期 (月/日/年)
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    // 显示格式： 本站已运行 100 天 10 小时 20 分 30 秒
+    runtime_span.innerHTML = "本站已运行: " + A + "天" + B + "小时" + C + "分" + D + "秒";
+}
+show_runtime();
+</script>
+	 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">你是到访这里的第<span id="busuanzi_value_site_pv"></span>个团子~</span>
     </div>
     <div class="moe-icp">
-        <img src="<%- url_for("/images/moeicp.webp") %>">
-        <a href="https://icp.gov.moe/?keyword=<%= theme.moeICP %>" target="_blank">萌ICP备<%= theme.moeICP %>号</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank"><%= theme.moeICP %>号</a>
     </div>
 </div>
